@@ -36,8 +36,8 @@ async function tts(text, _lang, options = {}) {
         speed: parseFloat(speed),
         input: text,
     };
-    if(model === 'gpt-4o-mini-tts' && instructions) {
-        payload.instructions = instructions;
+    if(model === 'gpt-4o-mini-tts' && instructions && instructions.trim()) {
+        payload.instructions = instructions.trim();
     }
 
     const res = await fetch(requestPath, {
