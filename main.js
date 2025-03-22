@@ -3,7 +3,7 @@ async function tts(text, _lang, options = {}) {
     const { http } = utils;
     const { fetch, Body } = http;
 
-    let { requestPath, apiKey, model, voice, speed } = config;
+    let { requestPath, apiKey, model, voice, speed, instructions } = config;
 
     if (!requestPath) {
         requestPath = "https://api.openai.com";
@@ -30,19 +30,24 @@ async function tts(text, _lang, options = {}) {
         speed = 1.0;
     }
     console.log(speed);
+    let payload = {
+        model,
+        voice,
+        speed: parseFloat(speed),
+        input: text,
+    };
+    if(model === 'gpt-4o-mini-tts' && instructions) {
+        payload.instructions = instructions;
+    }
+
     const res = await fetch(requestPath, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${apiKey}`
         },
-        body: Body.json({
-            model,
-            voice,
-            speed: parseFloat(speed),
-            input: text,
-        })
-        , responseType: 3
+        body: Body.json(payload),
+        responseType: 3
     });
 
     if (res.ok) {

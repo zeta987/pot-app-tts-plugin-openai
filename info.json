@@ -21,8 +21,14 @@
       "type": "select",
       "options": {
         "tts-1": "tts-1",
-        "tts-1-hd": "tts-1-hd"
+        "tts-1-hd": "tts-1-hd",
+        "gpt-4o-mini-tts": "gpt-4o-mini-tts"
       }
+    },
+    {
+      "key": "instructions",
+      "display": "语气指导",
+      "type": "input"
     },
     {
       "key": "voice",
@@ -30,10 +36,16 @@
       "type": "select",
       "options": {
         "alloy": "alloy",
+        "ash": "ash",
+        "ballad": "ballad",
+        "coral": "coral",
         "echo": "echo",
+        "fable": "fable",
         "onyx": "onyx",
         "nova": "nova",
-        "shimmer": "shimmer"
+        "sage": "sage",
+        "shimmer": "shimmer",
+        "verse": "verse"
       }
     },
     {
