@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="aiTtsBg" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="aiTtsSpark" x1="42" y1="10" x2="54" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#aiTtsBg)"/>
+  <g stroke="#FFFFFF" stroke-width="4" stroke-linecap="round">
+    <line x1="17" y1="28" x2="17" y2="38"/>
+    <line x1="25" y1="22" x2="25" y2="44"/>
+    <line x1="33" y1="18" x2="33" y2="48"/>
+    <line x1="41" y1="24" x2="41" y2="42"/>
+    <line x1="49" y1="29" x2="49" y2="37"/>
+  </g>
+  <path d="M48 10L49.9 14.1L54 16L49.9 17.9L48 22L46.1 17.9L42 16L46.1 14.1L48 10Z" fill="url(#aiTtsSpark)"/>
+</svg>
